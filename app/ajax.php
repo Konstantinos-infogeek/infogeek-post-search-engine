@@ -51,7 +51,8 @@ if (!function_exists('ips_format_single_post')) {
 	{
 		return [
 			"title" => $post->post_title,
-			"content" => $post->post_content,
+			"link" => get_permalink($post),
+			"content" => substr( $post->post_content, 0, strpos( $post->post_content, '.', 100) ),
 			"date" => $post->post_date,
 		];
 	}

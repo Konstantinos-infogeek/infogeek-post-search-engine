@@ -23,12 +23,12 @@ if (!function_exists('ips_search_shortcode')) {
 				<form>
 					<fieldset>
 						<label>Search Posts</label>
-						<input type='text' ng-model='search.name' ng-change='Search.init()'>
+						<input type='text' ng-model='search.title' ng-change='Search.init()'>
 					</fieldset>
 				</form>
 				<div class='search-results'>
-					<div ng-repeat='post in posts | filter: search.name'>
-						<h3>{{post.title}}</h3>
+					<div ng-repeat='post in posts | filter: search.title'>
+						<h4 class='name'><a ng-href='{{post.link}}'>{{post.title}}</a></h4>
 						<p ng-bind-html='post.content'></p>
 					</div>
 				</div>

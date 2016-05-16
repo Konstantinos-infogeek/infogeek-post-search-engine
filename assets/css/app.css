@@ -1,8 +1,19 @@
 .search-results {
+    font-family: Consolas;
     height: 500px;
     max-height: 500px;
     width: 100%;
 
     overflow-x: hidden;
     overflow-y: scroll;
+}
+.search-results h4.name {
+    padding: 0;
+    margin: 0 0 .5em 0;
+}
+.search-results h4.name a {
+    text-decoration: none;
+    border: none;
+    color: #00a0d2;
+    font-size: 1.1em;
 }
